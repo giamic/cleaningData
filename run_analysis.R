@@ -31,3 +31,4 @@ dataRdx <- cbind(dataRdx, dataActSub)
 
 ### create a second df with the average of the columns for every subject and activity
 res <- aggregate(. ~ Subject + Activity, dataRdx, mean)
+write.table(res, file="tidyData.txt", row.name=FALSE)
